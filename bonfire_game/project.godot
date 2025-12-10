@@ -11,8 +11,13 @@ config_version=5
 [application]
 
 config/name="Bonfire_project"
+run/main_scene="uid://dwvbtegkiv3bl"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[editor_plugins]
+
+enabled=PackedStringArray()
 
 [rendering]
 

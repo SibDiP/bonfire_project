@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://dwvbtegkiv3bl"]
+
+[ext_resource type="Texture2D" uid="uid://b3rnwoa5eoyqq" path="res://sprites/logs.png" id="1_067iu"]
+[ext_resource type="Script" uid="uid://cs1h3ybeigrqe" path="res://scripts/bonfire.gd" id="1_wfoe5"]
+[ext_resource type="Texture2D" uid="uid://cegyulhojt7xa" path="res://sprites/fire_1.png" id="3_b8r8p"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8ileh"]
+size = Vector2(31, 16)
+
+[node name="Bonfire" type="Node2D"]
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(48, 51)
+script = ExtResource("1_wfoe5")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+texture = ExtResource("1_067iu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-0.5, 2)
+shape = SubResource("RectangleShape2D_8ileh")
+
+[node name="Sprite2D_fire" type="Sprite2D" parent="Area2D"]
+visible = false
+position = Vector2(0, -12)
+texture = ExtResource("3_b8r8p")
